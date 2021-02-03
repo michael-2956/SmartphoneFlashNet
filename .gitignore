@@ -7,3 +7,6 @@ model_1000.ckpt.data-00000-of-00001
 model_1000.ckpt.index
 model.ckpt.data-00000-of-00001
 model.ckpt.index
+vocab.txt
+dataset_voc.txt
+dataset_conv.txt
