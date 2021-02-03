@@ -20,9 +20,13 @@ Please note that this program is under **testing & development**. The main pendi
 
 ## Installation
 
-For these scripts to run, you need tensorflow, pytg and numpy preinstalled. To install all the needed libraries in your activated environment, run:\
+First, clone the repository into you current folder:\
+```$ git clone https://github.com/michael-2956/SmartphoneFlashNet.git```\
+Get into the root folder of the repository:\
+```$ cd SmartphoneFlashNet```\
+For the scripts to run, you need tensorflow, pytg and numpy preinstalled. To install all the needed libraries in your activated local or global environment, run:\
 ```$ pip install -r requirements.txt```\
-When all the needed libraries are installed, you are ready to run the train & run scripts.
+When all the needed libraries are installed, you are ready to execute the train & run scripts.
 
 ## Usage
 
