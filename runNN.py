@@ -15,13 +15,6 @@ def main():
     """
     Main function generating the message via model.ckpt
     """
-    if len(sys.argv) != 3:
-        print(f"Usage:\n{sys.argv[0]} WORD NUMBER")
-        return
-
-    starting_word = sys.argv[1]
-    words_num = int(sys.argv[2])
-
     vocab = open("vocab.txt", "r")
     voc = [word[:-1] for word in vocab] + ["RANDOM"]
     model = keras.Sequential([
@@ -31,17 +24,14 @@ def main():
     model.load_weights("model.ckpt")
 
     print("\nTensorflow model successfully loaded!\n")
-    print("Generating message...")
-    print("\nMessage:", essay(voc, model, starting_word, words_num), '\n')
 
     while True:
-        ans = input("Do you want to continue generating? (Y/n): ")
-        if ans in ['Y', 'y', '']:
-            starting_word = input("Start you message: ")
-            print("Generating...")
-            print("Message:", essay(voc, model, starting_word, words_num), '\n')
-        elif ans in ['n', 'N']:
+        ans = input("To stop generating, simply press the Enter key.")
+        starting_word = input("Start you message: ")
+        if starting_word == '':
             break
+        print("Generating...")
+        print("Message:", essay(voc, model, starting_word, words_num), '\n')
 
 
 def essay(voc, model, start, words_num):
