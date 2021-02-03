@@ -24,12 +24,13 @@ def main():
     model.load_weights("model.ckpt")
 
     print("\nTensorflow model successfully loaded!\n")
+    print("To stop generating, simply press the Enter key.")
 
     while True:
-        ans = input("To stop generating, simply press the Enter key.")
         starting_word = input("Start you message: ")
         if starting_word == '':
             break
+        words_num = int(input("How many words whould you like to generate? "))
         print("Generating...")
         print("Message:", essay(voc, model, starting_word, words_num), '\n')
 
