@@ -8,13 +8,13 @@ from dataset_preprocessing_modules.make_vocab import count_vocab_words
 
 tf.get_logger().setLevel('ERROR')
 
-VOC_SIZE = count_vocab_words()
-
 def train_nn(dataset_vocab_filename):
     """
     This function creates and trains the neural network.
     """
     model_filename = 'model.ckpt'
+
+    VOC_SIZE = count_vocab_words()
 
     dataset_voc = open(dataset_vocab_filename, "r")
     train_msg_in = []
