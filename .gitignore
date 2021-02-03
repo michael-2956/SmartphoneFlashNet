@@ -1,0 +1,9 @@
+.DS_Store
+.vscode
+old_files
+__pycache__
+checkpoint
+model_1000.ckpt.data-00000-of-00001
+model_1000.ckpt.index
+model.ckpt.data-00000-of-00001
+model.ckpt.index
